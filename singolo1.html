@@ -1,75 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Singolo</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
     <link rel="stylesheet" href="singolo1.css">
 </head>
+
 <body>
-    <header class = "header">
-        <div class="wrapper">
-            <a href="#">Singolo<span class = "logo-asterisk">*</span></a>
-            <nav class = "header__navigation">
-                <ul class = "navigation">
-                    <li>Home</li>
-                    <li>Services</li>
-                    <li>Portfolio</li>
-                    <li>About</li>
-                    <li>Contact</li>
+    <div class="wrapper">
+        <header class="header">
+            <!-- <div class="wrapper"> -->
+            <div class="header__logo">
+                <h1><a href="#">Singolo<span class="header__logo-asterisk">*</span></a></h1>
+            </div>
+            <nav class="header__navigation">
+                <ul class="header__navigation__navigation">
+                    <li><a href = "#" class = "active">Home</a></li>
+                    <li><a href = "#">Services</a></li>
+                    <li><a href = "#">Portfolio</a></li>
+                    <li><a href = "#">About</a></li>
+                    <li><a href = "#">Contact</a></li>
                 </ul>
             </nav>
-        </div>
-    </header>
-    <main class="main">
-        <div class="wrapper">
+            <!-- </div> -->
+        </header>
+        <main class="main">
+            <!-- <div class="wrapper"> -->
             <section class="slider">
                 <div class="slider__left"></div>
                 <div class="slider__slide">
                     <div class="slide__phones">
-                        <img src="" alt="" class="phone-one">
-                        <img src="" alt="" class="phone-">
+                        <div class="slide__phones__left">
+                            <img src="/assets/images/phone_base.png" alt="" class="phone-one">
+                            <img src="/assets/images/phone_shadow.png" alt="" class="shadow">
+                        
+                        </div>
+                        <div class="slide__phones__right">
+                            <img src="/assets/images/phone_base.png" alt="" class="phone-two">
+                            <img src="/assets/images/phone_shadow.png" alt="" class="shadow">
+                        </div>
                     </div>
                 </div>
-                <div class="slider__rigth"></div>
+                <div class="slider__right"></div>
             </section>
             <section class="services">
-                <h1>Our Services</h1>
-                <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, 
-                    eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                <h2>Our Services</h2>
+                <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
+                    nisi erat porttitor ligula,
+                    eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                    nibh.</p>
                 <div class="services__bullets">
                     <div class="service__bullet">
-                        <div class="bullet__image">
-                            <img src="/assets/bullets/pen.png" alt="">
+                        <div class="bullet__image bullet__image-pen">
+                            <!-- <img src="/assets/images/icons/pen.svg" alt="Custom Design"> -->
                         </div>
                         <div class="bullet__text">
-                            <h2>Custom Design</h2>
-                            <p class="bullet__text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+                            <h3>Custom Design</h3>
+                            <p class="bullet__text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
+                                laoreet, viverra lacus ut, ultrices velit.</p>
                         </div>
                     </div>
                     <div class="service__bullet">
-                        <div class="bullet__image">
-                            <img src="" alt="">
+                        <div class="bullet__image bullet__image-bulb">
+                            <!-- <img src="/assets/images/icons/bulb.svg" alt="Inovative Ideas"> -->
                         </div>
                         <div class="bullet__text">
-                            <h2>Inovative Ideas</h2>
-                            <p class="bullet__text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+                            <h3>Inovative Ideas</h3>
+                            <p class="bullet__text">Quisque luctus, quam eget molestie commodo, lacus purus cursus
+                                purus, nec rutrum tellus dolor id lorem.</p>
                         </div>
                     </div>
                     <div class="service__bullet">
-                        <div class="bullet__image">
-                            <img src="" alt="">
+                        <div class="bullet__image bullet__image-heart">
+                            <!-- <img src="/assets/images/icons/heart.svg" alt="Love Is The Answer"> -->
                         </div>
                         <div class="bullet__text">
-                            <h2>Love Is The Answer</h2>
-                            <p class="bullet__text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+                            <h3>Love Is The Answer</h3>
+                            <p class="bullet__text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
+                                et consequat felis. Quisque condimentum.</p>
+                        </div>
+                    </div>
+                    <div class="service__bullet">
+                        <div class="bullet__image bullet__image-phone">
+                            <!-- <img src="/assets/images/icons/heart.svg" alt="Love Is The Answer"> -->
+                        </div>
+                        <div class="bullet__text">
+                            <h3>Responsive Layout</h3>
+                            <p class="bullet__text">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
+                        </div>
+                    </div>
+                    <div class="service__bullet">
+                        <div class="bullet__image bullet__image-bubble">
+                            <!-- <img src="/assets/images/icons/heart.svg" alt="Love Is The Answer"> -->
+                        </div>
+                        <div class="bullet__text">
+                            <h3>24 / 7 Support</h3>
+                            <p class="bullet__text">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .</p>
+                        </div>
+                    </div>
+                    <div class="service__bullet">
+                        <div class="bullet__image bullet__image-star">
+                            <!-- <img src="/assets/images/icons/heart.svg" alt="Love Is The Answer"> -->
+                        </div>
+                        <div class="bullet__text">
+                            <h3>Feel Like A Star</h3>
+                            <p class="bullet__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-        </div>  
-    </main>
-
+            <!-- </div>   -->
+        </main>
+    </div>
 </body>
+
 </html>

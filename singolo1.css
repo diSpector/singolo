@@ -1,8 +1,290 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
 
 html, body{
-    margin: 0;
-    padding: 0;
     font-family: Lato, sans-serif;
     font-size: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    width: 1020px;
+    margin: 0 auto;
+}
+
+header, main{
+    /* padding-left: 40px;
+    padding-right: 40px; */
+}
+
+h1, h2, h3, ul{
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #2d303a;
+    height: 95px;
+    box-sizing: border-box;
+    border-bottom: 5px solid #323746;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.header__logo h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 90px;
+    /* letter-spacing: 0.01px; */
+}
+.header__logo a{
+    text-decoration: none;
+    color: white;
+}
+
+.header__logo 
+
+.header__logo-asterisk{
+    color: red;
+}
+
+.header__navigation__navigation li{
+    display: inline-block;
+    color: white;
+    padding-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 80px;
+    margin-left: 10px;
+}
+
+.header__navigation__navigation li a{
+    text-decoration: none;
+    color: white;
+}
+
+.header__navigation__navigation li a:hover{
+    color: #f06c64;
+    cursor: pointer;
+}
+
+.header__navigation__navigation li a.active{
+    color: #f06c64;
+    cursor: pointer;
+}
+
+.header__navigation__navigation li::before {
+    margin-right: 13px;
+    content: "·"; 
+    color: #494e62;
+}
+
+.header__navigation__navigation li:first-child::before {
+    content: ""; 
+}
+
+.slider{
+    height: 600px;
+    box-sizing: border-box;
+    border-bottom: 5px solid #ea676b;
+    background-color: #f06c64;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+}
+
+.slider__left{
+    width: 20px;
+    background: url(/assets/images/icons/chev_left.svg) no-repeat 50% 50%;
+}
+
+.slider__right{
+    width: 20px;
+    background: url(/assets/images/icons/chev_right.svg) no-repeat 50% 50%;
+}
+
+.slider__left:hover{
+    cursor: pointer;
+    background: url(/assets/images/icons/chev_left_hover.svg) no-repeat 50% 50%;
+}
+
+.slider__right:hover{
+    cursor: pointer;
+    background: url(/assets/images/icons/chev_right_hover.svg) no-repeat 50% 50%;
+}
+
+.slider__slide{
+    width: 900px;
+    padding-top: 52px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+/* .slide__phones{
+    display: flex;
+    justify-content: space-between;
+} */
+
+.slide__phones__left, .slide__phones__right{
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+}
+
+.phone-one, .phone-two{
+    position: relative;
+    z-index: 10;
+}
+
+.slide__phones__left .shadow{
+    position: absolute;
+    z-index: 2;
+    top: 3px;
+    left: 3px;
+}
+
+.slide__phones__left::before{
+    position: absolute;
+    top: 65px;
+    left: 15px;
+    content: '';
+    z-index: 20;
+    width: 190px;
+    height: 335px;
+    background: url(/assets/images/screen_yellow.png) no-repeat 3% 55%;
+}
+
+.slide__phones__right{
+    transform: rotate(90deg);
+    margin-left: 215px;
+}
+
+.slide__phones__right .shadow{
+    position: absolute;
+    transform: scaleX(-1);
+    z-index: 2;
+    top: -26px;
+    left: 1px;
+}
+
+.slide__phones__right::before{
+    position: absolute;
+    top: 65px;
+    left: 15px;
+    content: '';
+    z-index: 20;
+    width: 190px;
+    height: 335px;
+    background: url(/assets/images/screen_blue.png) no-repeat 23% 65%;
+}
+
+.services{
+    height: 500px;
+    box-sizing: border-box;
+    border-bottom: 5px solid #ffffff;
+    background-color: #f2f2f2;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+.services h2{
+    font-size: 3rem;
+    font-weight: 900;
+    color: #666d89;
+    text-transform: capitalize;
+    padding-top: 60px;
+}
+
+.services p{
+    margin-top: 17px;
+    font-size: 1.8rem;
+    color: #767e9e;
+    font-weight: 250;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.services__bullets{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 47px;
+    box-sizing: border-box;
+}
+
+.service__bullet{
+    flex-basis: 32%;
+    display: flex;
+    margin-left: 1px;
+    margin-bottom: 23px;
+}
+
+.bullet__text{
+    width: 220px;
+    margin-left: 21px;
+    margin-top: -4px;
+}
+.bullet__text h3{
+    font-size: 1.8rem;
+    color: #666d89;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.bullet__text p{
+    font-size: 1.2rem;
+    margin: 8px 0;
+    padding: 0;
+    line-height: 22px;
+    color: #767e9e;
+    font-weight: 400;
+}
+
+.bullet__image, .bullet__text{
+    display: inline-block;
+}
+
+.service__bullet .bullet__image{
+    box-sizing: border-box;
+    width: 59px;
+    height: 59px;
+
+    border: 2px solid #666d89;
+    border-radius: 50%;
+    position: relative;
+    /* background-image: url(/assets/images/icons/bulb.png) no-repeat 50% 0; */
+    /* background: url(/assets/images/icons/bulb.png) no-repeat 50% 50%; */
+
+}
+
+.service__bullet .bullet__image img{
+    height: 32px;
+    text-align: center;
+}
+
+.bullet__image-pen{
+    background: url(/assets/images/icons/pen.svg) no-repeat 50% 50%;
+}
+.bullet__image-bulb{
+    background: url(/assets/images/icons/bulb.svg) no-repeat 50% 50%;
+}
+
+.bullet__image-heart{
+    background: url(/assets/images/icons/heart.svg) no-repeat 50% 50%;
+}
+
+.bullet__image-phone{
+    background: url(/assets/images/icons/phone.svg) no-repeat 50% 50%;
+}
+
+.bullet__image-bubble{
+    background: url(/assets/images/icons/bubble.svg) no-repeat 50% 50%;
+}
+.bullet__image-star{
+    background: url(/assets/images/icons/star.svg) no-repeat 50% 50%;
 }
