@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 html, body{
     font-family: Lato, sans-serif;
     font-size: 10px;
@@ -19,6 +23,7 @@ h1, h2, h3, ul, p, ul, li, div{
 }
 
 .header{
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     background-color: #2d303a;
@@ -80,7 +85,7 @@ h1, h2, h3, ul, p, ul, li, div{
     content: ""; 
 }
 
-.slider{
+/* .slider{
     height: 600px;
     box-sizing: border-box;
     border-bottom: 5px solid #ea676b;
@@ -115,6 +120,65 @@ h1, h2, h3, ul, p, ul, li, div{
     padding-top: 52px;
     padding-left: 50px;
     box-sizing: border-box;
+} */
+
+.slider{
+    height: 600px;
+    box-sizing: border-box;
+    border-bottom: 5px solid #ea676b;
+    position: relative;
+    background-color: #f06c64;
+    overflow: hidden;
+
+    /* padding-left: 40px;
+    padding-right: 40px; */
+    /* display: inline-block; */
+}
+
+.slider__slides{
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.slide{
+    flex: 0 0 auto;
+}
+
+.slider__left{
+    position: absolute;
+    width: 20px;
+    left: 40px;
+    z-index: 11;
+    height: 100%;
+    background: url(./assets/images/icons/chev_left.svg) no-repeat 49.4% 49.4%;
+}
+
+.slider__right{
+    position: absolute;
+    width: 20px;
+    right: 40px;
+    top: 0;
+    z-index: 11;
+    height: 100%;
+    background: url(./assets/images/icons/chev_right.svg) no-repeat 100% 49.4%;
+}
+
+.slider__left:hover{
+    cursor: pointer;
+    background: url(./assets/images/icons/chev_left_hover.svg) no-repeat 49.4% 49.4%;
+}
+
+.slider__right:hover{
+    cursor: pointer;
+    background: url(./assets/images/icons/chev_right_hover.svg) no-repeat 100% 49.4%;
+}
+
+.slider__slide1{
+    width: 1020px;
+    padding-top: 52px;
+    padding-left: 110px;
+    box-sizing: border-box;
+    background-color: #f06c64;
 }
 
 .slide__phones__left, .slide__phones__right{
@@ -135,15 +199,18 @@ h1, h2, h3, ul, p, ul, li, div{
     top: 1px;
 }
 
-.slide__phones__left::before{
+.slide__phones__left__phone{
     position: absolute;
     top: 65px;
     left: 15px;
-    content: '';
     z-index: 20;
     width: 190px;
     height: 335px;
     background: url(./assets/images/screen_yellow.png) no-repeat 3.4% 54.7%;
+}
+
+.slide__phones__left__phone.off{
+    background: none;
 }
 
 .slide__phones__right{
@@ -160,15 +227,17 @@ h1, h2, h3, ul, p, ul, li, div{
     top: -121px;
 }
 
-.slide__phones__right::before{
+.slide__phones__right__phone{
     position: absolute;
     top: 13px;
     left: 61px;
-    content: '';
     z-index: 20;
     width: 335px;
     height: 190px;
     background: url(./assets/images/screen_blue.png) no-repeat 51% 30%;
+}
+.slide__phones__right__phone.off{
+    background: none;
 }
 
 .services{
@@ -362,6 +431,7 @@ h1, h2, h3, ul, p, ul, li, div{
     width: 220px;
     height: 187px;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .projects__project:hover{
@@ -420,6 +490,9 @@ h1, h2, h3, ul, p, ul, li, div{
     background: url(./assets/images/projects/project12.png) 48% 25% no-repeat;
 }
 
+.projects__project.project_border{
+    border:5px solid #F06C64;
+}
 .about_us{
     background-color: #f2f2f2;
     padding: 59px 40px 48px 40px;
@@ -694,5 +767,49 @@ h1, h2, h3, ul, p, ul, li, div{
 }
 
 .footer__icons span:hover{
+    cursor: pointer;
+}
+
+#modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.modal__background{
+    background-color: black;
+    opacity: 80%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal__message{
+    font-family: Lato, sans-serif;
+    width: 20vw;
+    height: 15vw;
+    background-color: white;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    font-size: 1.8rem;
+    padding: 40px;
+}
+
+.modal__message div{
+    color: black;
+    margin-bottom: 20px;
+}
+
+.modal__button{
+    color: black;
+    padding: 20px;
+    background-color: yellow;;
+    border: 1px solid black;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.modal__button:hover{
     cursor: pointer;
 }

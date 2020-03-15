@@ -9,25 +9,45 @@
 
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header class="header" id = "home">
             <div class="header__logo">
                 <h1><a href="#">Singolo<span class="header__logo-asterisk">*</span></a></h1>
             </div>
             <nav class="header__navigation">
                 <ul class="header__navigation__navigation">
-                    <li><a href = "#" class = "active">Home</a></li>
-                    <li><a href = "#">Services</a></li>
-                    <li><a href = "#">Portfolio</a></li>
-                    <li><a href = "#">About</a></li>
-                    <li><a href = "#">Contact</a></li>
+                    <li><a href = "#home" class = "active">Home</a></li>
+                    <li><a href = "#services">Services</a></li>
+                    <li><a href = "#portfolio">Portfolio</a></li>
+                    <li><a href = "#about">About</a></li>
+                    <li><a href = "#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <main class="main">
             <section class="slider">
-                <div class="slider__left">
+                <div class="slider__control slider__left"></div>
+                <div class="slider__control slider__right"></div>
+                <div class="slider__slides">
+                    <div class="slider__slide1 slide">
+                        <div class="slide__phones">
+                            <div class="slide__phones__left">
+                                <div class = "slide__phones__left__phone"></div>
+                                <img src="./assets/images/phone_base.png" alt="phone_1" class="phone-one">
+                                <img src="./assets/images/phone_shadow.png" alt="phone_1_shadow" class="shadow">
+                            </div>
+                            <div class="slide__phones__right">
+                                <div class = "slide__phones__right__phone"></div>
+                                <img src="./assets/images/phone_base_horizontal.png" alt="phone_2" class="phone-two">
+                                <img src="./assets/images/phone_shadow.png" alt="phone_2_shadow" class="shadow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide2 slide">
+                        <img src="./assets/images/slide2.png" alt="slide two">
+                    </div>
                 </div>
-                <div class="slider__slide">
+
+                <!-- <div class="slider__slide">
                     <div class="slide__phones">
                         <div class="slide__phones__left">
                             <img src="./assets/images/phone_base.png" alt="phone_1" class="phone-one">
@@ -38,10 +58,9 @@
                             <img src="./assets/images/phone_shadow.png" alt="phone_2_shadow" class="shadow">
                         </div>
                     </div>
-                </div>
-                <div class="slider__right"></div>
+                </div> -->
             </section>
-            <section class="services">
+            <section class="services" id = "services">
                 <h2>Our Services</h2>
                 <p class = "services_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
                     nisi erat porttitor ligula,
@@ -101,7 +120,7 @@
                     </div>
                 </div>
             </section>
-            <section class="portfolio">
+            <section class="portfolio" id = "portfolio">
                 <h2>Portfolio</h2>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                 <div class="portfolio__tags">
@@ -127,7 +146,7 @@
                     <div class="projects__project project12"></div>
                 </div>
             </section>
-            <section class="about_us">
+            <section class="about_us" id = "about">
                 <h2>About Us</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
                     nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
@@ -183,15 +202,15 @@
                     </div>
                 </div>
             </section>
-            <section class="quote">
+            <section class="quote" id = "contact">
                 <h2>Get a Quote</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 <div class="quote__form">
-                    <form action="index.html" method = "POST" class="contact_form">
-                        <input type="text" name="contact_form[name]" id="" placeholder="Name (Required)" required>
-                        <input type="email" name="contact_form[email]" id="" placeholder="Email (Required)" required>
-                        <input type="text" name="contact_form[subject]" id="" placeholder="Subject">
-                        <textarea name="contact_form[details]" id="" placeholder="Describe your project in detail..."></textarea>
+                    <form action="index.html" method = "POST" class="contact_form" id = "form">
+                        <input type="text" name="contact_form[name]" id="name" placeholder="Name (Required)" required>
+                        <input type="email" name="contact_form[email]" id="email" placeholder="Email (Required)" required>
+                        <input type="text" name="contact_form[subject]" id="subject" placeholder="Subject">
+                        <textarea name="contact_form[details]" id="details" placeholder="Describe your project in detail..."></textarea>
                         <input type="submit" value="Submit">
                     </form>
                     <div class="contact_information">
@@ -225,6 +244,16 @@
             </div>
         </footer>
     </div>
+    <div id="modal">
+        <div class="modal__background"></div>
+        <div class="modal__message">
+            <div>Письмо отправлено</div>
+            <div class="modal__message__subject"></div>
+            <div class="modal__message__details"></div>
+            <div class="modal__button">ОК</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
