@@ -164,5 +164,6 @@ form.addEventListener('submit', (e) => {
 // нажатие на кнопку ОК в модальном окне
 modalFormButton.addEventListener('click', ()=>{
     modalForm.style.display = 'none';
+    form.reset();
 })
 

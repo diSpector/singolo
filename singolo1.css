@@ -12,11 +12,6 @@ html, body{
     margin: 0 auto;
 }
 
-header, main{
-    /* padding-left: 40px;
-    padding-right: 40px; */
-}
-
 h1, h2, h3, ul{
     text-transform: uppercase;
     color: white;
