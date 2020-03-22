@@ -3,10 +3,11 @@
 const navLinks = document.querySelectorAll('nav ul li a');
 
 // слайдер
-const sliderWidthMax = 1020;
 const sliderInitialPos = 0;
 let sliderCurrentPos = sliderInitialPos;
 let slider = document.querySelector('.slider');
+// const sliderWidthMax = 1020;
+let sliderWidthMax = slider.offsetWidth;
 let slidesWrapper = document.querySelector('.slider__slides');
 let slides = document.querySelectorAll('.slider__slides .slide');
 let slidesCount = slides.length;
@@ -65,6 +66,7 @@ navLinks.forEach(link => {
 
 // слайдер
 rightArrow.addEventListener('click', function(){
+    sliderWidthMax = slider.offsetWidth;
     if (sliderCurrentPos >= (slidesCount-1)){
         slidesWrapper.style.transform = 'translateX(0px)';
         sliderCurrentPos = 0;
@@ -76,6 +78,7 @@ rightArrow.addEventListener('click', function(){
 });
 
 leftArrow.addEventListener('click', function(){
+    sliderWidthMax = slider.offsetWidth;
     if (sliderCurrentPos <= 0){
         slidesWrapper.style.transform = 'translateX(-' + sliderWidthMax * (slidesCount - 1) + 'px)';
         sliderCurrentPos = slidesCount-1;
@@ -167,3 +170,9 @@ modalFormButton.addEventListener('click', ()=>{
     form.reset();
 })
 
+// костыль, чтобы слайдер не сдвигался
+window.addEventListener('resize', (event) => {
+    if (window.innerWidth < 1020 && sliderCurrentPos != 0){
+        slidesWrapper.style.transform = `translateX(-${window.innerWidth}px)`;
+    }
+});

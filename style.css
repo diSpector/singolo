@@ -439,55 +439,56 @@ h1, h2, h3, ul, p, ul, li, div{
 }
 
 .projects__project.project1{
-    background: url(./assets/images/projects/project1.png) 45% 22% no-repeat;
+    /* background: url(./assets/images/projects/project1.png) 45% 22% no-repeat; */
+    background: url(./assets/images/projects/project1.png) 45% 22%;
 }
 
 .projects__project.project2{
-    background: url(./assets/images/projects/project2.png) 57% 50% no-repeat;
+    background: url(./assets/images/projects/project2.png) 57% 50%;
 }
 
 .projects__project.project3{
-    background: url(./assets/images/projects/project3.png) 36% 1% no-repeat;
+    background: url(./assets/images/projects/project3.png) 36% 1%;
 }
 
 .projects__project.project4{
-    background: url(./assets/images/projects/project4.png) 57% 22% no-repeat;
+    background: url(./assets/images/projects/project4.png) 57% 22%;
 }
 
 .projects__project.project5{
-    background: url(./assets/images/projects/project5.png) 46% 18% no-repeat;
+    background: url(./assets/images/projects/project5.png) 46% 18%;
 }
 
 .projects__project.project6{
-    background: url(./assets/images/projects/project6.png) 41% 64% no-repeat;
+    background: url(./assets/images/projects/project6.png) 41% 64%;
 }
 
 .projects__project.project7{
-    background: url(./assets/images/projects/project7.png) 20% 21% no-repeat;
+    background: url(./assets/images/projects/project7.png) 20% 21%;
 }
 
 .projects__project.project8{
-    background: url(./assets/images/projects/project8.png) 41% 35% no-repeat;
+    background: url(./assets/images/projects/project8.png) 41% 35%;
 }
 
 .projects__project.project9{
-    background: url(./assets/images/projects/project9.png) 57% 22% no-repeat;
+    background: url(./assets/images/projects/project9.png) 57% 22%;
 }
 
 .projects__project.project9{
-    background: url(./assets/images/projects/project9.png) 46% 48% no-repeat;
+    background: url(./assets/images/projects/project9.png) 46% 48%;
 }
 
 .projects__project.project10{
-    background: url(./assets/images/projects/project10.png) 56% 24% no-repeat;
+    background: url(./assets/images/projects/project10.png) 56% 24%;
 }
 
 .projects__project.project11{
-    background: url(./assets/images/projects/project11.png) 73% 78% no-repeat;
+    background: url(./assets/images/projects/project11.png) 73% 78%;
 }
 
 .projects__project.project12{
-    background: url(./assets/images/projects/project12.png) 48% 25% no-repeat;
+    background: url(./assets/images/projects/project12.png) 48% 25%;
 }
 
 .projects__project.project_border{
@@ -533,7 +534,7 @@ h1, h2, h3, ul, p, ul, li, div{
     height: 300px;
 }
 
-.designer___photo.designer1{
+/* .designer___photo.designer1{
     background: url(./assets/images/photos/photo1.png) 0% 0% no-repeat;
 }
 
@@ -543,7 +544,7 @@ h1, h2, h3, ul, p, ul, li, div{
 
 .designer___photo.designer3{
     background: url(./assets/images/photos/photo3.png) 0% 0% no-repeat;
-}
+} */
 
 .designer__name h2{
     font-size: 1.8rem;
@@ -675,8 +676,10 @@ h1, h2, h3, ul, p, ul, li, div{
 }
 
 .quote__form input[type="submit"]{
-    width: 50%;
+    width: 31%;
     cursor: pointer;
+    background-color: #FBC65F;
+    color: #886A30;
 }
 .quote__form input[type="submit"]:hover{
     color: white;
@@ -813,3 +816,128 @@ h1, h2, h3, ul, p, ul, li, div{
 .modal__button:hover{
     cursor: pointer;
 }
+
+@media only screen and (max-width: 1020px) {
+    .wrapper{
+      width: 100%;
+    }
+
+    .slider{
+        height: 58vw;
+    }
+
+    .slider__slide1 {
+      width: 100%;
+      padding-top: 5%;
+      padding-left: 11%;
+
+    }
+
+    .slide__phones__left{
+        width: 24%;
+    }
+
+    .slide__phones__left__phone{
+        top: 14%;
+        left: 7%;
+        height: 72%;
+        background-size: 300%;
+        width: 87%;
+    }
+
+    .slide__phones__left .phone-one{
+        width: 100%;
+    }
+
+    .slide__phones__left .shadow{
+        width: 110%;  
+    }
+
+    .slide__phones__right{
+        width: 51%;
+        margin-left: 9.5%;
+        margin-top: 10%;
+    }
+
+    .slide__phones__right__phone{
+        top: 6.5%;
+        left: 13%;
+        height: 86%;
+        background-size: 161%;
+        width: 72%;
+    }
+
+    .slide__phones__right .phone-two{
+        width: 100%;
+    }
+
+    .slide__phones__right .shadow{
+        width: 52%;  
+        right: 21%;
+        top: -54%;
+    }
+
+    .slider__slide2{
+        width: 100vw;
+    }
+    .slider__slide2 img{
+        width: 100vw;
+    }
+
+    .slider__left{
+        left: 4%;
+    }
+    .slider__right{
+        right: 4%;
+    }
+
+    .services{
+        height: 675px;
+    }
+    
+    .service__bullet{
+        flex-basis: 47%;
+        margin-bottom: 40px;
+    }
+
+    .portfolio{
+        /* height: 1102px; */
+        height: auto;
+    }
+
+    .projects{
+        /* height: 794px; */
+        height: auto;
+    }
+
+    .projects__project{
+        width: calc((100vw - 136px)/3);
+        height: calc((100vw - 136px)/3 * 0.85);
+    }
+
+    .designer{
+        width: 32%;
+    }
+
+    .designer .designer___photo{
+        width: 100%;
+        height: auto;
+    } 
+    
+    .designer .designer___photo img{
+        width: 100%;
+    } 
+    
+    .quote__form form{
+        width: 64%;
+        height: 373px;
+    }
+
+    .quote__form .contact_information{
+        width: 32%;
+    }
+
+    .quote__form textarea{
+        height: 159px;
+    }
+  }
