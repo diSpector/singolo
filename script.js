@@ -14,6 +14,12 @@ let slidesCount = slides.length;
 let rightArrow = document.querySelector('.slider__control.slider__right');
 let leftArrow = document.querySelector('.slider__control.slider__left');
 
+let burger = document.querySelector('.header__burger');
+let navigationMenu = document.querySelector('.header__navigation__navigation')
+let blackblock = document.querySelector('.blackblock');
+let dropdownMenu = document.querySelector('.header__navigation__dropdown');
+
+
 // убрать стиль со всех элементов коллекции
 function removeStyleFromCollection(collection, style){
     collection.forEach(elem => {elem.classList.remove(style)});
@@ -175,4 +181,19 @@ window.addEventListener('resize', (event) => {
     if (window.innerWidth < 1020 && sliderCurrentPos != 0){
         slidesWrapper.style.transform = `translateX(-${window.innerWidth}px)`;
     }
+});
+
+burger.addEventListener('click', () => {
+    // navigationMenu.style.display = 'block';
+    let el = document.querySelector('.header__navigation__navigation__dropdown');
+    if (el.style.display == '' || el.style.display == 'none'){
+        el.style.display = 'block';
+    } else {
+        el.style.displaylay = 'none';
+    }
+    // navigationMenu.classList.toggle('visible')
+    el.classList.toggle('visible')
+    // dropdownMenu.display.style = ''
+    // navigationMenu.classList.toggle('visible');
+    // navigationMenu.classList.toggle('menuShow');
 });
