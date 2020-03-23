@@ -953,7 +953,7 @@ h1, h2, h3, ul, p, ul, li, div{
     }
   }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     header.header{
         justify-content: center;
         height: 19vw;
@@ -1097,7 +1097,7 @@ h1, h2, h3, ul, p, ul, li, div{
     }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 374px) {
     .bullet__text{
         width: 180px;
     }
