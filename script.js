@@ -14,10 +14,13 @@ let slidesCount = slides.length;
 let rightArrow = document.querySelector('.slider__control.slider__right');
 let leftArrow = document.querySelector('.slider__control.slider__left');
 
-let burger = document.querySelector('.header__burger');
+let burger = document.querySelector('.header__burger'); // блок гамбургер-меню
+let burgerImg = document.querySelector('.header__burger img'); // значок гамбургера
 let navigationMenu = document.querySelector('.header__navigation__navigation')
-let blackblock = document.querySelector('.blackblock');
-let dropdownMenu = document.querySelector('.header__navigation__dropdown');
+let blackblock = document.querySelector('.blackblock'); // прозрачный черный фон
+
+// let mobileMenu = document.querySelector('.header__navigation__mobile__menu'); // мобильное меню
+let mobileMenuNav = document.querySelector('.header__navigation__mobile'); // мобильное меню
 
 
 // убрать стиль со всех элементов коллекции
@@ -183,17 +186,31 @@ window.addEventListener('resize', (event) => {
     }
 });
 
+// скрыть/показать меню в мобильной версии по клику на гамбургер/темный фон за его пределами/при выборе меню
 burger.addEventListener('click', () => {
-    // navigationMenu.style.display = 'block';
-    let el = document.querySelector('.header__navigation__navigation__dropdown');
-    if (el.style.display == '' || el.style.display == 'none'){
-        el.style.display = 'block';
-    } else {
-        el.style.displaylay = 'none';
-    }
-    // navigationMenu.classList.toggle('visible')
-    el.classList.toggle('visible')
-    // dropdownMenu.display.style = ''
-    // navigationMenu.classList.toggle('visible');
-    // navigationMenu.classList.toggle('menuShow');
+    burgerImg.classList.toggle('rotated');
+    toggleVisible(blackblock);
+    toggleVisible(mobileMenuNav);
+
 });
+
+blackblock.addEventListener('click', ()=>{
+    toggleVisible(blackblock);
+    toggleVisible(mobileMenuNav);
+    burgerImg.classList.toggle('rotated');
+});
+
+mobileMenuNav.addEventListener('click', () => {
+    toggleVisible(blackblock);
+    toggleVisible(mobileMenuNav);
+    burgerImg.classList.toggle('rotated');
+});
+
+// показать элемент или спрятать через св-во display (через .classList.add не работает)
+function toggleVisible(el) {
+    if (el.style.display == 'block'){
+        el.style.display = 'none';
+    } else {
+        el.style.display = 'block';
+    }
+}

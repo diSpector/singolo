@@ -11,6 +11,19 @@ html, body{
     padding: 0;
 }
 
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
+
+.rotated{
+    transform: rotate(90deg);
+    position: fixed;
+}
+
 .wrapper{
     width: 1020px;
     margin: 0 auto;
@@ -46,23 +59,22 @@ h1, h2, h3, ul, p, ul, li, div{
 
 .header__burger{
     position: absolute;
+    left: 20px;
+    top: calc((19vw - 20px)/2);
     display: none;
+    z-index: 15;
 }
 
-.hidden{
-    display: none;
+.header__burger img{
+    transition: .3s all; 
 }
 
-.visible{
-    display: block;
-}
-
-.header__logo h1{
+.header__logo h1, .header__logo__mobile h1{
     font-size: 2.5rem;
     font-weight: 400;
     letter-spacing: -0.4px;
 }
-.header__logo a{
+.header__logo a, .header__logo__mobile a{
     text-decoration: none;
     color: white;
 }
@@ -75,11 +87,22 @@ h1, h2, h3, ul, p, ul, li, div{
     padding-top: 6px;
 }
 
-.header__navigation__dropdown{
-    display: none;;
+.header__navigation__mobile{
+    display: none;
+    position: fixed;
+    padding-top: 232px;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 74vw;
+    height: 100vh;
+    background: #2D303A;
+    box-sizing: border-box;
+    margin-right: 0;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
 }
 
-.header__navigation__navigation li{
+.header__navigation__navigation li, .header__navigation__mobile__menu li{
     display: inline-block;
     color: white;
     font-size: 1.2rem;
@@ -88,17 +111,17 @@ h1, h2, h3, ul, p, ul, li, div{
     margin-left: 10px;
 }
 
-.header__navigation__navigation li a{
+.header__navigation__navigation li a, .header__navigation__mobile__menu li a{
     text-decoration: none;
     color: white;
 }
 
-.header__navigation__navigation li a:hover{
+.header__navigation__navigation li a:hover, .header__navigation__mobile__menu li a:hover{
     color: #f06c64;
     cursor: pointer;
 }
 
-.header__navigation__navigation li a.active{
+.header__navigation__navigation li a.active, .header__navigation__mobile__menu li a.active{
     color: #f06c64;
     cursor: pointer;
 }
@@ -109,46 +132,13 @@ h1, h2, h3, ul, p, ul, li, div{
     color: #494e62;
 }
 
+.header__navigation__mobile__menu li:before{
+    display: none;
+}
+
 .header__navigation__navigation li:first-child::before {
     content: ""; 
 }
-
-/* .slider{
-    height: 600px;
-    box-sizing: border-box;
-    border-bottom: 5px solid #ea676b;
-    background-color: #f06c64;
-    padding-left: 40px;
-    padding-right: 40px;
-    display: flex;
-}
-
-.slider__left{
-    width: 20px;
-    background: url(./assets/images/icons/chev_left.svg) no-repeat 49.4% 49.4%;
-}
-
-.slider__right{
-    width: 20px;
-    background: url(./assets/images/icons/chev_right.svg) no-repeat 100% 49.4%;
-}
-
-.slider__left:hover{
-    cursor: pointer;
-    background: url(./assets/images/icons/chev_left_hover.svg) no-repeat 49.4% 49.4%;
-}
-
-.slider__right:hover{
-    cursor: pointer;
-    background: url(./assets/images/icons/chev_right_hover.svg) no-repeat 100% 49.4%;
-}
-
-.slider__slide{
-    width: 900px;
-    padding-top: 52px;
-    padding-left: 50px;
-    box-sizing: border-box;
-} */
 
 .slider{
     height: 600px;
@@ -157,10 +147,6 @@ h1, h2, h3, ul, p, ul, li, div{
     position: relative;
     background-color: #f06c64;
     overflow: hidden;
-
-    /* padding-left: 40px;
-    padding-right: 40px; */
-    /* display: inline-block; */
 }
 
 .slider__slides{
@@ -275,7 +261,6 @@ h1, h2, h3, ul, p, ul, li, div{
     background-color: #f2f2f2;
     padding-left: 40px;
     padding-right: 40px;
-
 }
 
 .services h2{
@@ -561,18 +546,6 @@ h1, h2, h3, ul, p, ul, li, div{
     width: 300px;
     height: 300px;
 }
-
-/* .designer___photo.designer1{
-    background: url(./assets/images/photos/photo1.png) 0% 0% no-repeat;
-}
-
-.designer___photo.designer2{
-    background: url(./assets/images/photos/photo2.png) 0% 0% no-repeat;
-}
-
-.designer___photo.designer3{
-    background: url(./assets/images/photos/photo3.png) 0% 0% no-repeat;
-} */
 
 .designer__name h2{
     font-size: 1.8rem;
@@ -923,24 +896,30 @@ h1, h2, h3, ul, p, ul, li, div{
         height: 675px;
     }
     
+    .services_text{
+        height: auto;
+    }
+
     .service__bullet{
         flex-basis: 47%;
         margin-bottom: 40px;
     }
 
     .portfolio{
-        /* height: 1102px; */
         height: auto;
     }
 
     .projects{
-        /* height: 794px; */
         height: auto;
     }
 
     .projects__project{
         width: calc((100vw - 136px)/3);
         height: calc((100vw - 136px)/3 * 0.85);
+    }
+
+    .about_us__designers{
+        padding-top: 28px;
     }
 
     .designer{
@@ -955,6 +934,10 @@ h1, h2, h3, ul, p, ul, li, div{
     .designer .designer___photo img{
         width: 100%;
     } 
+
+    .quote{
+        padding-top: 53px;
+    }
     
     .quote__form form{
         width: 64%;
@@ -978,48 +961,155 @@ h1, h2, h3, ul, p, ul, li, div{
         border: 0;
     }
 
-    .header__navigation{
-        display: none;
-    }
-
-    .header__navigation__dropdown{
-        display: block;
-    }
-
-    .header__navigation__navigation__dropdown {
-        /* width: 74vw;
-        height: 100vh; */
-        /* background: #2D303A; */
-        /* z-index: 10; */
-        padding-left: 50%;
-        padding-top: 50%;
-        display: none;
-        position: fixed;
-        left: 0;
-        top: 100px;
-        z-index: 10;
-        width: 74vw;
-        height: 100vh;
-        background: #2D303A;
-
-    }
-
-    .header__navigation__navigation li{
-        display: block;
-        font-size: 2.0rem;
-    }
-
     .header__logo{
         align-self: center;
     }
 
-    .header__logo h1{
+    .header__logo h1 {
         font-size: 5.5vw;
+    }
+
+    .header__navigation{
+        display: none;
     }
 
     .header__burger{
         display: block;
-        left: 20px;
-        top: calc((100% - 20px)/2);
+    }
+
+    .header__navigation__mobile__menu {
+        position: absolute;
+        right: 71px;
+    }
+
+    .header__navigation__mobile__menu li{
+        display: block;
+        font-size: 2.0rem;
+        margin-bottom: 27px;
+    }
+
+    .header__logo__mobile{
+        position: fixed;
+        top: 24px;
+        right: calc(71px + 26vw);
+    }
+
+    .header__logo__mobile h1{
+        font-size: 2.0rem;
+    }
+
+    .slider__left, .slider__right{
+        height: 90%;
+    }
+
+    .slider__left{
+        left: 3%;
+    }
+
+    .slider__right{
+        right: 3%;
+    }
+
+    .services{
+        padding-left: 32px;
+        padding-right: 29px;
+        height: auto;
+    }
+    .services p.services_text{
+        height: auto;
+        text-align: left;
+    }
+    
+    .services__bullets{
+        flex-direction: column;
+    }
+
+    .service__bullet{
+        margin-bottom: 15px;
+        flex-basis: 50%;
+        align-self: center;
+    }
+
+    .portfolio{
+        padding: 42px 30px;
+    }
+
+    .portfolio p{
+        margin-top: 13px;
+    }
+
+    .projects__project{
+        width: 38vw;
+        height: calc(38vw * 0.84);
+        margin-bottom: 14px;
+    }
+
+    .projects__project:nth-child(n+9){
+        display: none;
+    }
+
+    .about_us{
+        padding: 33px 30px 45px;
+    }
+
+    .about_us__designers{
+        padding-top: 14px;
+    }
+
+    .designer{
+        width: 100%;
+        margin-bottom: 34pb;
+    }
+
+    .designer__icons{
+        padding-top: 9px;
+    }
+    
+    .quote{
+        padding: 44px 30px 42px;
+    }
+
+    .quote__form{
+        padding-top: 19px;
+        flex-direction: column;
+        height: 600px;
+    }
+    .quote__form form{
+        width: 100%;
+        height: 373px;
+    }
+
+    .quote__form input[type="submit"]{
+        width: 100%;
+        height: 50px;
+    }
+
+    .quote__form .contact_information{
+        width: 100%;
+    }
+
+    .footer{
+        justify-content: center;
+    }
+    
+    .footer__copyright{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .bullet__text{
+        width: 180px;
+    }
+
+    .portfolio__tags ul li{
+        padding-left: 3px;
+        padding-right: 3px;
+        margin-right: 2px;
+        font-size: 1.1rem;
+    }
+
+    .projects__project {
+        width: 36vw;
     }
 }

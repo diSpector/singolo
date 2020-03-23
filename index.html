@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Singolo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,6 +12,9 @@
     <div class="wrapper">
         <div class="blackblock"></div>
         <header class="header" id = "home">
+            <div class="header__burger">
+                <img src="./assets/images/icons/burger.svg" alt="Menu">
+            </div>
             <div class="header__logo">
                 <h1><a href="#">Singolo<span class="header__logo-asterisk">*</span></a></h1>
             </div>
@@ -23,11 +27,11 @@
                     <li><a href = "#contact">Contact</a></li>
                 </ul>
             </nav>
-            <nav class="header__navigation__dropdown">
-                <div class="header__burger">
-                    <img src="./assets/images/icons/burger.svg" alt="Menu">
+            <nav class="header__navigation__mobile">
+                <div class="header__logo__mobile">
+                    <h1><a href="#">Singolo<span class="header__logo-asterisk">*</span></a></h1>
                 </div>
-                <ul class="header__navigation__navigation__dropdown">
+                <ul class="header__navigation__mobile__menu">
                     <li><a href = "#home" class = "active">Home</a></li>
                     <li><a href = "#services">Services</a></li>
                     <li><a href = "#portfolio">Portfolio</a></li>
@@ -59,19 +63,6 @@
                         <img src="./assets/images/slide2.png" alt="slide two">
                     </div>
                 </div>
-
-                <!-- <div class="slider__slide">
-                    <div class="slide__phones">
-                        <div class="slide__phones__left">
-                            <img src="./assets/images/phone_base.png" alt="phone_1" class="phone-one">
-                            <img src="./assets/images/phone_shadow.png" alt="phone_1_shadow" class="shadow">
-                        </div>
-                        <div class="slide__phones__right">
-                            <img src="./assets/images/phone_base_horizontal.png" alt="phone_2" class="phone-two">
-                            <img src="./assets/images/phone_shadow.png" alt="phone_2_shadow" class="shadow">
-                        </div>
-                    </div>
-                </div> -->
             </section>
             <section class="services" id = "services">
                 <h2>Our Services</h2>
